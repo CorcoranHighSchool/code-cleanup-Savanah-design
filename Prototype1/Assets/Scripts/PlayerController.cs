@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,19 +9,15 @@ public class PlayerController : MonoBehaviour
     // Turning input
     private float horizontalInput;
     // Forward Input
+    private float fowardInput;
+    private const string vertical = "Vertical";
     private float forwardInput;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+// Update is called once per frame
     void Update()
     {
         //Get the forward Input
-        forwardInput = Input.GetAxis("Vertical");
+        forwardInput = Input.GetAxis(vertical);
         //Get the horizontal Input
         horizontalInput = Input.GetAxis("Horizontal");
 
